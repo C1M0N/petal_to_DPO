@@ -5,22 +5,21 @@ build.py 生成的 ch{NN}.ipynb（demo）和 ch{NN}_work.ipynb（work）是**只
 ——它们是「教材副本」，不在上面做题。本脚本帮你**复制一份可写副本**来做。
 
 最常用：
-    python3 scripts/new_attempt.py ch02
+    ./start ch02
         → 如果 ch02_attempt.ipynb 已存在：直接在 VS Code 里打开它
         → 如果不存在：基于 ch02_work 复制一份 + 在 VS Code 里打开
-    或者用根目录 wrapper：
-        ./start ch02
+
+自定义副本名（第二个位置参数）：
+    ./start ch02 pass2          → ch02_pass2.ipynb
+    ./start ch02 review -d      → ch02_review.ipynb（基于 demo 含答案的副本）
+    ./start ch02 monday         → ch02_monday.ipynb（比如想留多次尝试做对照）
 
 重做一遍（覆盖现有进度）：
-    python3 scripts/new_attempt.py ch02 -f
-    ./start ch02 -f
-
-复习（基于 demo 含答案的副本）：
-    python3 scripts/new_attempt.py ch02 --from-demo --name review
-    ./start ch02 -d -n review
+    ./start ch02 -f             → 覆盖 ch02_attempt.ipynb
+    ./start ch02 pass2 -f       → 覆盖 ch02_pass2.ipynb
 
 不自动打开 VS Code：
-    python3 scripts/new_attempt.py ch02 --no-open
+    ./start ch02 --no-open
 """
 
 import argparse
@@ -87,8 +86,9 @@ def main():
         epilog=__doc__,
     )
     parser.add_argument("ch", help="章节标识，如 ch02、ch03")
-    parser.add_argument("-n", "--name", default="attempt",
-                        help="副本名后缀（默认 attempt，生成 ch{NN}_attempt.ipynb）")
+    parser.add_argument("name", nargs="?", default="attempt",
+                        help="副本名后缀（默认 attempt，生成 ch{NN}_attempt.ipynb；"
+                             "传第二个位置参数可改名，如 './start ch02 pass2' → ch02_pass2.ipynb）")
     parser.add_argument("-d", "--from-demo", action="store_true",
                         help="基于 demo 副本（含答案）而不是 work 副本——复习用")
     parser.add_argument("-f", "--force", action="store_true",
@@ -105,7 +105,7 @@ def main():
     # 已存在且没 -f → 直接打开，不复制
     if dst.exists() and not args.force:
         print(f"📓 已有可写副本：{dst.relative_to(ROOT)}")
-        print(f"  （要重做就加 -f；要看 demo 答案就加 -d --name review）")
+        print(f"  （要重做就加 -f；要复习就 './start {args.ch} review -d' 建个独立副本）")
         if not args.no_open and _open_in_vscode(dst):
             print(f"✅ 已用 VS Code 打开\n")
         elif not args.no_open:

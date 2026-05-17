@@ -2,10 +2,11 @@
 # blossom 一键开始/继续学习副本，并自动在 VS Code 里打开。
 #
 # 最常用：
-#     ./start ch02           # 首次：复制可写副本 + 打开 VS Code
-#                            # 之后：直接打开已有副本
-#     ./start ch02 -f        # 重做：覆盖现有副本
-#     ./start ch02 -d -n review   # 基于 demo（含答案）的复习副本
+#     ./start ch02            # 首次：复制可写副本 + 打开 VS Code
+#                             # 之后：直接打开已有副本
+#     ./start ch02 pass2      # 自定义副本名 → ch02_pass2.ipynb
+#     ./start ch02 -f         # 重做：覆盖现有 attempt
+#     ./start ch02 review -d  # 基于 demo（含答案）的复习副本
 #
 # 所有参数会原样传给 scripts/new_attempt.py，详见 `--help`。
 
