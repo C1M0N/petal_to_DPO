@@ -1,0 +1,27 @@
+# Notebook 生成的图片缓存
+ch*/figures/
+
+# Jupyter checkpoints（根 .gitignore 已覆盖，这里再写一遍保险）
+.ipynb_checkpoints/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# uv 虚拟环境
+.venv/
+
+# macOS 系统文件
+.DS_Store
+**/.DS_Store
+
+# rebuild 时手工备份
+*.bak.ipynb
+
+# 学生 attempt 副本（每个人的进度，可选 commit；不强制入库）
+ch*_attempt.ipynb
+ch*_pass*.ipynb
+ch*_review.ipynb
+
+# macOS Finder 误建的空目录
+untitled folder/
