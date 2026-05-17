@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# macOS 系统文件
+.DS_Store
+**/.DS_Store
+
+# VS Code 个人工作区设置
+.vscode/
