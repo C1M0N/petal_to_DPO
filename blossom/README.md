@@ -7,7 +7,8 @@
 | 章 | 主题 | demo（含答案） | work（学生填空版） | 状态 |
 |---|------|---------------|------------------|------|
 | 2 | 线性代数 | [ch02.ipynb](ch02-linear-algebra/ch02.ipynb) | [ch02_work.ipynb](ch02-linear-algebra/ch02_work.ipynb) | ✅ 已完成 |
-| 3+ | 概率论 / 数值计算 / 机器学习基础 / ... | — | — | 待 Ch 2 反馈后扩展 |
+| 3 | 概率与信息论 | [ch03.ipynb](ch03-probability/ch03.ipynb) | [ch03_work.ipynb](ch03-probability/ch03_work.ipynb) | ✅ 已完成 |
+| 4+ | 数值计算 / 机器学习基础 / ... | — | — | 待 |
 
 每章是一个独立子目录，包含：
 - `chXX.ipynb`：**只读 demo 副本**，含完整答案、解释、可视化（chmod 444）

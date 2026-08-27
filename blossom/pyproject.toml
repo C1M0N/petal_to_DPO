@@ -13,6 +13,9 @@ dependencies = [
     "ipywidgets>=8.1",
     "jupyterlab>=4.0",
     "scikit-learn>=1.4",
+    "scipy>=1.10",        # Ch 3 起：scipy.stats 的 PMF/PDF/CDF/entropy
+    "networkx>=3.0",      # Ch 3 §3：图模型可视化
+    "pgmpy>=0.1.25",      # Ch 3 §3：贝叶斯网 + 马尔可夫网
 ]
 
 [tool.uv]
