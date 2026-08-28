@@ -6,6 +6,7 @@
 
 | 章 | 主题 | demo（含答案） | work（学生填空版） | 状态 |
 |---|------|---------------|------------------|------|
+| 1 | 引言 | [ch01.ipynb](ch01-introduction/ch01.ipynb) | [ch01_work.ipynb](ch01-introduction/ch01_work.ipynb) | ✅ 已完成 |
 | 2 | 线性代数 | [ch02.ipynb](ch02-linear-algebra/ch02.ipynb) | [ch02_work.ipynb](ch02-linear-algebra/ch02_work.ipynb) | ✅ 已完成 |
 | 3 | 概率与信息论 | [ch03.ipynb](ch03-probability/ch03.ipynb) | [ch03_work.ipynb](ch03-probability/ch03_work.ipynb) | ✅ 已完成 |
 | 4+ | 数值计算 / 机器学习基础 / ... | — | — | 待 |
