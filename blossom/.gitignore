@@ -25,3 +25,11 @@ ch*_review.ipynb
 
 # macOS Finder 误建的空目录
 untitled folder/
+
+# 用户私人答题本与草稿(勿入公开仓)
+ch*/ch*_C1M0N.ipynb
+ch*/seven.ipynb
+
+# 版权材料(花书原文 PDF,本地保留不入库)
+花书拆解/*.pdf
+花书拆解/**/*.pdf
